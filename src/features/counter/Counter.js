@@ -17,6 +17,10 @@ export function Counter() {
 
   const incrementValue = Number(incrementAmount) || 0;
 
+  fetch("https://www.reddit.com/hot/.json").then(response => {
+    response.json().then(data => console.log(data.data.children[0].data.title));
+  })
+
   return (
     <div>
       <div className={styles.row}>
