@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { isLoading, loadHotPostPreviews, selectAllPreviews } from './hotPostPreviewsSlice';
 import PostPreview from '../../components/PostPreview';
+import '../../styles/PostPreviews.css'
 
 const HotPostPreviews = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const HotPostPreviews = () => {
   }
   
   return (
-    <section className='post-container'>
+    <section className='posts-container'>
       {hotPostPreviews.map((post, index) => (
         <div key={index}>
           <PostPreview postData={post.data}/>
