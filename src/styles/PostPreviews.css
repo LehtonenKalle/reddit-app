@@ -1,6 +1,8 @@
 * {
   padding: 0;
   font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  line-height: 1.4rem;
 }
 
 .posts-container {
@@ -11,20 +13,36 @@
 .post-container {
   width: 100%;
   margin-bottom: 2rem;
-  padding: 1rem;
 }
 
-.post-thumbail-container {
+.post-thumbnail-container {
+  padding: 1.5rem;
 }
 
-.thumbnail {
-  width: 20rem;
+.subreddit {
   padding-top: 1rem;
 }
 
-.post-info-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+.thumbnail {
+  max-width: 20rem;
+  padding-top: 2rem;
 }
 
+.post-info-container {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem 1rem;
+}
+
+.comment {
+  width: 1.5rem;
+}
+
+.upvote {
+  width: 1.5rem;
+}
+
+.author {
+  align-self: flex-end;
+}
