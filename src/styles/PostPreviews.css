@@ -4,43 +4,27 @@
 }
 
 .posts-container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
   margin: auto;
-  gap: 5rem;
+  width: 30%;
 }
 
 .post-container {
   width: 100%;
-  min-height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  border-style: ridge;
-  background-color: rgb(253, 252, 252);
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .post-thumbail-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: 80%;
-  align-self: stretch;
-  padding: 1.5rem;
 }
 
 .thumbnail {
+  width: 20rem;
   padding-top: 1rem;
-  width: 15rem;
 }
 
 .post-info-container {
-  padding: 1.5rem;
-  flex-basis: 20%;
-  align-self: stretch;
-  background-color: darkgray;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 

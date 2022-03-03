@@ -3,7 +3,8 @@ export default function PostPreview({ postData }) {
     <button className='post-container'>
       <div className='post-thumbail-container'>
         <h2>{postData.title}</h2>
-        <img className='thumbnail' src={postData.thumbnail} alt=''/>
+        <img className='thumbnail' src={postData.url} alt=''/>
+        {console.log(postData.url)}
       </div>
       <div className='post-info-container'>
         <h3 className='score'>Score: {postData.score}</h3>
