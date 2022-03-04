@@ -1,12 +1,12 @@
 import comment from '../assets/images/comment.png';
 import like from '../assets/images/like.png'
 
-export default function PostPreview({ postData }) {
+const PostPreview = ({postData}) => {
   return (
     <button className='post-container'>
       <div className='post-thumbnail-container'>
         <h2 className='post-title'>{postData.title}</h2>
-        <h3 className='subreddit'>{postData.subreddit_name_prefixed}</h3>
+        <h4 className='subreddit'>{postData.subreddit_name_prefixed}</h4>
         <img className='thumbnail' src={postData.url} alt=''/>
       </div>
       <div className='post-info-container'>
@@ -23,3 +23,5 @@ export default function PostPreview({ postData }) {
     </button>
   )
 }
+
+export default PostPreview;

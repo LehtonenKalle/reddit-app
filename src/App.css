@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4rem;
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
   background-color: rgb(240, 240, 240);

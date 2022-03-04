@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { isLoading, loadHotPostPreviews, selectAllPreviews } from './hotPostPreviewsSlice';
-import PostPreview from '../../components/PostPreview';
-import '../../styles/PostPreviews.css'
+import { isLoading, loadHotPostPreviews, selectAllPreviews } from '../hotPosts/hotPostPreviewsSlice';
+import PostPreview from '../../../components/PostPreview';
+import '../../../styles/PostPreviews.css'
 
 const HotPostPreviews = () => {
   const dispatch = useDispatch();
