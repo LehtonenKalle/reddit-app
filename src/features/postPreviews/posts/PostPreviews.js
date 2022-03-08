@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { isLoading, loadHotPostPreviews, selectAllPreviews } from '../hotPosts/hotPostPreviewsSlice';
+import { isLoading, loadPostPreviews, selectAllPreviews } from './postPreviewsSlice';
 import PostPreview from '../../../components/PostPreview';
 import '../../../styles/PostPreviews.css'
 
-const HotPostPreviews = () => {
+const PostPreviews = () => {
   const dispatch = useDispatch();
   const isLoadingPreviews = useSelector(isLoading);
-  const hotPostPreviews = useSelector(selectAllPreviews);
+  const postPreviews = useSelector(selectAllPreviews);
 
   console.log(isLoadingPreviews);
-  console.log(hotPostPreviews);
+  console.log(postPreviews);
 
   useEffect(() => {
-    dispatch(loadHotPostPreviews());
+    dispatch(loadPostPreviews());
   }, [dispatch])
 
   if (isLoadingPreviews) {
@@ -25,7 +25,7 @@ const HotPostPreviews = () => {
   
   return (
     <section className='posts-container'>
-      {hotPostPreviews.map((post, index) => (
+      {postPreviews.map((post, index) => (
         <div key={index}>
           <PostPreview postData={post.data}/>
         </div>
@@ -34,4 +34,4 @@ const HotPostPreviews = () => {
   )
 }
 
-export default HotPostPreviews;
+export default PostPreviews;

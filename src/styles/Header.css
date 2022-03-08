@@ -1,11 +1,12 @@
 header {
-  background-color: hsl(230, 8%, 15%);
-  color: white;
+  background-color: white;
+  color: #252525;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
   padding: 1rem;
+  box-shadow: 4px 4px 8px #9c9c9c;
 }
 
 header > * {
