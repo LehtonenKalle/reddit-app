@@ -10,11 +10,9 @@ const PostPreviews = () => {
   const isLoadingPreviews = useSelector(isLoading);
   const postPreviews = useSelector(selectAllPreviews);
 
-  console.log(isLoadingPreviews);
-  console.log(postPreviews);
 
   useEffect(() => {
-    dispatch(loadPostPreviews());
+    dispatch(loadPostPreviews(''));
   }, [dispatch])
 
   if (isLoadingPreviews) {
