@@ -1,13 +1,15 @@
 import '../../styles/Header.css';
-import redditLogo from '../../assets/images/redditlogo.png';
-import { Link } from 'react-router-dom';
+import pageLogo from '../../assets/images/page-logo-small.jpg';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  let navigate = useNavigate();
   return (
     <header>
       <div className='logo-with-text'>
-        <img className='logo' src={redditLogo} alt=''></img>
-        <h2 className='logo-text'>RedditMinimal</h2>
+        <input type='image' className='logo' src={pageLogo} alt='' 
+          onClick={() => navigate('/')} 
+        />
       </div>
       <input className='search' placeholder='Search...'/>
       <nav className='navigation'>

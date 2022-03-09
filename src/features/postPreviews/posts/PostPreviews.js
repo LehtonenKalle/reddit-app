@@ -5,15 +5,14 @@ import { isLoading, loadPostPreviews, selectAllPreviews } from './postPreviewsSl
 import PostPreview from '../../../components/PostPreview';
 import '../../../styles/PostPreviews.css'
 
-const PostPreviews = () => {
+const PostPreviews = ({ page }) => {
   const dispatch = useDispatch();
   const isLoadingPreviews = useSelector(isLoading);
   const postPreviews = useSelector(selectAllPreviews);
 
-
   useEffect(() => {
-    dispatch(loadPostPreviews(''));
-  }, [dispatch])
+    dispatch(loadPostPreviews(page));
+  }, [page])
 
   if (isLoadingPreviews) {
     return (

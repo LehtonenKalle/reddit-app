@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const loadPostPreviews = createAsyncThunk(
   'postPreviews/loadPostPreviews',
-  async (page) => {
+  async (page = "") => {
     const data = await fetch(`https://www.reddit.com/${page}/.json`);
     const json = await data.json();
     return json;
