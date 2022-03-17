@@ -29,8 +29,8 @@
 }
 
 .thumbnail {
-  width: 80%;
-  padding-top: 2rem;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .post-info-container {
@@ -56,4 +56,9 @@
 .author {
   align-self: center;
   padding-right: 2rem;
+}
+
+.video {
+  width: 100%;
+  padding-top: 1rem;
 }
