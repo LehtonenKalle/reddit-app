@@ -11,6 +11,8 @@ header {
   padding: 1rem 3rem;
   position: fixed;
   box-sizing: border-box;
+
+  z-index: 1000;
 }
 
 header > * {
