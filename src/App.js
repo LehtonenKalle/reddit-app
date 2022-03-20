@@ -13,16 +13,18 @@ function App() {
   return (
     <>
       <Router>
-      <Header />
-        <Routes>
-          <Route path="/" element={<PostPreviews />} />
-          <Route path="/hot" element={<PostPreviews page='hot' />} />
-          <Route path="/top" element={<PostPreviews page='top' />} />
-          <Route path="/new" element={<PostPreviews page='new' />} />
-          <Route path="/rising" element={<PostPreviews page='rising' />} />
-        </Routes>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<PostPreviews />} />
+            <Route path="/hot" element={<PostPreviews page='hot' />} />
+            <Route path="/top" element={<PostPreviews page='top' />} />
+            <Route path="/new" element={<PostPreviews page='new' />} />
+            <Route path="/rising" element={<PostPreviews page='rising' />} />
+          </Routes>
+          <Subreddits />
+        </main>
       </Router>
-      <Subreddits />
     </>
   );
 }

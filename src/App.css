@@ -5,6 +5,13 @@
   font-family: sans-serif;
 }
 
+main {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
   background-color: rgb(240, 240, 240);
