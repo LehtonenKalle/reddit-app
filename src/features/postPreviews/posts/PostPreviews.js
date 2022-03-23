@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { isLoading, loadPostPreviews, selectAllPreviews } from './postPreviewsSlice';
+import { isLoading, loadPostPreviews, selectAllPreviews, selectFilteredAllPreviews } from './postPreviewsSlice';
 import PostPreview from '../../../components/PostPreview';
 import '../../../styles/PostPreviews.css'
 import { useParams } from 'react-router-dom';
@@ -13,6 +13,8 @@ const PostPreviews = ({ page }) => {
   const dispatch = useDispatch();
   const isLoadingPreviews = useSelector(isLoading);
   const postPreviews = useSelector(selectAllPreviews);
+  const filteredPostPreviews = useSelector(selectFilteredAllPreviews);
+  console.log(filteredPostPreviews);
 
   useEffect(() => {
     dispatch(loadPostPreviews(path));
@@ -26,7 +28,7 @@ const PostPreviews = ({ page }) => {
   
   return (
     <section className='posts-container'>
-      {postPreviews.map((post, index) => (
+      {filteredPostPreviews.map((post, index) => (
         <div key={index}>
           <PostPreview postData={post.data}/>
         </div>

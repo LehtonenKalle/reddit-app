@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { selectSearchTerm } from "../../header/searchBar/searchBarSlice";
 
 export const loadPostPreviews = createAsyncThunk(
   'postPreviews/loadPostPreviews',
@@ -26,6 +27,7 @@ export const postPreviewsSlice = createSlice({
       state.isLoading = false;
       state.hasError = false;
       state.posts = data.children;
+      console.log(state.posts);
     },
     [loadPostPreviews.rejected]: (state, action) => {
       state.isLoading = false;
@@ -35,6 +37,17 @@ export const postPreviewsSlice = createSlice({
 })
 
 export const selectAllPreviews = (state) => state.postPreviews.posts;
+
+export const selectFilteredAllPreviews = (state) => {
+  const allPreviews = selectAllPreviews(state);
+  const searchTerm = selectSearchTerm(state);
+
+  return allPreviews.filter((post) => {
+    return post.data.title.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+
+}
+
 export const isLoading = (state) => state.postPreviews.isLoading;
 
 export default postPreviewsSlice.reducer;

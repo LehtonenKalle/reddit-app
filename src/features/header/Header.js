@@ -1,6 +1,7 @@
 import '../../styles/Header.css';
 import pageLogo from '../../assets/images/page-logo-small.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import SearchBar from './searchBar/SearchBar';
 
 const Header = () => {
   let navigate = useNavigate();
@@ -11,7 +12,7 @@ const Header = () => {
           onClick={() => navigate('/')} 
         />
       </div>
-      <input className='search' placeholder='Search...'/>
+      <SearchBar />
       <nav className='navigation'>
         <ul>
           <li><Link to='/hot'>Hot</Link></li>
